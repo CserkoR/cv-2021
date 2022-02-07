@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="App.css">
+    <title>Mastermind</title>
+</head>
+
+<body>
+    <div class="main-container">
+        <div class="header">
+            <p onclick="gameStart()">Mastermind</p>
+        </div>
+        <div class="full-game">
+            <div class="game-head">
+                <div class="correct-grid">
+                    <div class="grid-item" id="correct1">?</div>
+                    <div class="grid-item" id="correct2">?</div>
+                    <div class="grid-item" id="correct3">?</div>
+                    <div class="grid-item" id="correct4">?</div>
+                </div>
+                <div class="timer"  id="timer">00:00</div>
+            </div>
+            <div class="game-body">
+                <div class="gameTable-grid">
+                    <div class="grid-item" id="1">•</div>
+                    <div class="grid-item" id="2">•</div>
+                    <div class="grid-item" id="3">•</div>
+                    <div class="grid-item" id="4">•</div>
+                    <div class="grid-item2">
+                        <div class="spike" id="spike1">•</div>
+                        <div class="spike" id="spike2">•</div>
+                        <div class="spike" id="spike3">•</div>
+                        <div class="spike" id="spike4">•</div>
+                    </div>
+                    <div class="grid-item" id="5">•</div>
+                    <div class="grid-item" id="6">•</div>
+                    <div class="grid-item" id="7">•</div>
+                    <div class="grid-item" id="8">•</div>
+                    <div class="grid-item2">
+                        <div class="spike" id="spike5">•</div>
+                        <div class="spike" id="spike6">•</div>
+                        <div class="spike" id="spike7">•</div>
+                        <div class="spike" id="spike8">•</div>
+                    </div>
+                    <div class="grid-item" id="9">•</div>
+                    <div class="grid-item" id="10">•</div>
+                    <div class="grid-item" id="11">•</div>
+                    <div class="grid-item" id="12">•</div>
+                    <div class="grid-item2">
+                        <div class="spike" id="spike9">•</div>
+                        <div class="spike" id="spike10">•</div>
+                        <div class="spike" id="spike11">•</div>
+                        <div class="spike" id="spike12">•</div>
+                    </div>
+                    <div class="grid-item" id="13">•</div>
+                    <div class="grid-item" id="14">•</div>
+                    <div class="grid-item" id="15">•</div>
+                    <div class="grid-item" id="16">•</div>
+                    <div class="grid-item2">
+                        <div class="spike" id="spike13">•</div>
+                        <div class="spike" id="spike14">•</div>
+                        <div class="spike" id="spike15">•</div>
+                        <div class="spike" id="spike16">•</div>
+                    </div>
+                    <div class="grid-item" id="17">•</div>
+                    <div class="grid-item" id="18">•</div>
+                    <div class="grid-item" id="19">•</div>
+                    <div class="grid-item" id="20">•</div>
+                    <div class="grid-item2">
+                        <div class="spike" id="spike17">•</div>
+                        <div class="spike" id="spike18">•</div>
+                        <div class="spike" id="spike19">•</div>
+                        <div class="spike" id="spike20">•</div>
+                    </div>
+                    <div class="grid-item" id="21">•</div>
+                    <div class="grid-item" id="22">•</div>
+                    <div class="grid-item" id="23">•</div>
+                    <div class="grid-item" id="24">•</div>
+                    <div class="grid-item2">
+                        <div class="spike" id="spike21">•</div>
+                        <div class="spike" id="spike22">•</div>
+                        <div class="spike" id="spike23">•</div>
+                        <div class="spike" id="spike24">•</div>
+                    </div>
+                    <div class="grid-item" id="25">•</div>
+                    <div class="grid-item" id="26">•</div>
+                    <div class="grid-item" id="27">•</div>
+                    <div class="grid-item" id="28">•</div>
+                    <div class="grid-item2">
+                        <div class="spike" id="spike25">•</div>
+                        <div class="spike" id="spike26">•</div>
+                        <div class="spike" id="spike27">•</div>
+                        <div class="spike" id="spike28">•</div>
+                    </div>
+                    <div class="grid-item" id="29">•</div>
+                    <div class="grid-item" id="30">•</div>
+                    <div class="grid-item" id="31">•</div>
+                    <div class="grid-item" id="32">•</div>
+                    <div class="grid-item2">
+                        <div class="spike" id="spike29">•</div>
+                        <div class="spike" id="spike30">•</div>
+                        <div class="spike" id="spike31">•</div>
+                        <div class="spike" id="spike32">•</div>
+                    </div>
+                    <div class="grid-item" id="33">•</div>
+                    <div class="grid-item" id="34">•</div>
+                    <div class="grid-item" id="35">•</div>
+                    <div class="grid-item" id="36">•</div>
+                    <div class="grid-item2">
+                        <div class="spike" id="spike33">•</div>
+                        <div class="spike" id="spike34">•</div>
+                        <div class="spike" id="spike35">•</div>
+                        <div class="spike" id="spike36">•</div>
+                    </div>
+                    <div class="grid-item" id="37">•</div>
+                    <div class="grid-item" id="38">•</div>
+                    <div class="grid-item" id="39">•</div>
+                    <div class="grid-item" id="40">•</div>
+                    <div class="grid-item2">
+                        <div class="spike" id="spike37">•</div>
+                        <div class="spike" id="spike38">•</div>
+                        <div class="spike" id="spike39">•</div>
+                        <div class="spike" id="spike40">•</div>
+                    </div>
+                    <div class="grid-item" id="41">•</div>
+                    <div class="grid-item" id="42">•</div>
+                    <div class="grid-item" id="43">•</div>
+                    <div class="grid-item" id="44">•</div>
+                    <div class="grid-item2">
+                        <div class="spike" id="spike41">•</div>
+                        <div class="spike" id="spike42">•</div>
+                        <div class="spike" id="spike43">•</div>
+                        <div class="spike" id="spike44">•</div>
+                    </div>
+
+                </div>
+                <div class="choose-grid">
+                    <div class="red" onclick="chooseColorFunc(this)"></div>
+                    <div class="white" onclick="chooseColorFunc(this)"></div>
+                    <div class="blue" onclick="chooseColorFunc(this)"></div>
+                    <div class="pink" onclick="chooseColorFunc(this)"></div>
+                    <div class="orange" onclick="chooseColorFunc(this)"></div>
+                    <div class="purple" onclick="chooseColorFunc(this)"></div>
+                    <div class="yellow" onclick="chooseColorFunc(this)"></div>
+                    <div class="green" onclick="chooseColorFunc(this)"></div>
+                    <div></div>
+                    <div class="apply" onclick="apply()">✔️</div>
+                    <div class="undo" onclick="undo()">↩️</div>
+                </div>
+            </div>
+        </div>
+        <div class="gameInfo" id="gameInfo" style="visibility:hidden"></div>
+    </div>
+    <script src="main.js"></script>
+</body>
+
+</html>
